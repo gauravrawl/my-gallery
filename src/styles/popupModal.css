@@ -1,0 +1,19 @@
+.pop-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     z-index: 1000;
+  }
+
+   .pop-modal img{
+max-height: 90%;
+max-width: 90%;
+border-radius: .5rem;
+  }
+  
