@@ -15,7 +15,7 @@ const PopupModal: React.FC<ModalProps> = ({ image, onClose }) => {
     >
       <img
         src={image?.urls?.regular}
-        alt={image?.alt || 'Album Image'}
+        alt={image?.alt_description || 'Album Image'}
       />
     </div>
   );

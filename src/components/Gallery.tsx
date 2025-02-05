@@ -11,21 +11,19 @@ const Gallery: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [selectedImage, setSelectedImage] = useState<Images | null>(null);
 
-  const apiUrl: string = `${ip}/photos?page=${page}&per_page=25&client_id=${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`
-
   const fetchImages = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(apiUrl);
+      const response = await fetch(`${ip}/photos?page=${page}&per_page=25&client_id=${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`);
       const data: Images[] = await response.json();
     //   console.log('result', data)
       setImages((prevImg) => [...prevImg, ...data]);
     } catch (error) {
       console.error("Error from api>>>", error);
     } finally{
-        setIsLoading(true)
+        setIsLoading(false)
     }
-  }, [apiUrl]);
+  }, [page]);
 
   useEffect(() => {
     fetchImages();
@@ -50,6 +48,8 @@ const Gallery: React.FC = () => {
           <PhotoCard key={image?.id} image={image} onClick={setSelectedImage}/>
         ))}
       </Masonry>
+
+      {isLoading && <div className="loader">Loading more...</div>}
 
       {selectedImage && (
         <PopupModal image={selectedImage} onClose={() => setSelectedImage(null)} />

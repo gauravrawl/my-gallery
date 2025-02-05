@@ -12,7 +12,7 @@ const PhotoCard: React.FC<ImageCardProps> = ({ image, onClick }) => {
     <img
       key={image?.id}
       src={image?.urls.small}
-      alt={image?.alt || 'gallery_photo'}
+      alt={image?.alt_description || 'gallery_photo'}
       className="image-card"
       onClick={() => onClick(image)}
     />

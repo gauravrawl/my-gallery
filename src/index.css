@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #a8edea 0%, #be5f7d 100%);
+  font-family: Arial, sans-serif;
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+
+.loader{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
