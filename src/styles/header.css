@@ -1,0 +1,29 @@
+.title-bar {
+    display: flex;
+    align-items: center;
+    background-color: #890a32;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #400215;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
