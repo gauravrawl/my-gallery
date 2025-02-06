@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/photoCard.css';
 import { Images } from '../types/images';
-
 interface ImageCardProps {
   image: Images,
   onClick: (image: Images) => void;

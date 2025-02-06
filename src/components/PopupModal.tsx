@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/popupModal.css'
 import { Images } from '../types/images';
 
+
 interface ModalProps {
   image: Images;
   onClose: () => void;

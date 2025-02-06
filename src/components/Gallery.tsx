@@ -1,9 +1,9 @@
 import React,{ useEffect, useState, useCallback } from "react";
 import Masonry from "react-responsive-masonry";
 import { ip } from "../utils/baseurl";
-import { Images } from "../types/images";
 import PhotoCard from "./PhotoCard";
 import PopupModal from "./PopupModal";
+import { Images } from "../types/images";
 
 const Gallery: React.FC = () => {
   const [images, setImages] = useState<Images[]>([]);
